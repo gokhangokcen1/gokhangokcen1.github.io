@@ -25,7 +25,7 @@
           <nav aria-label="Links">
             <a href="https://www.linkedin.com/in/gokhangokcen" target="_blank" rel="noreferrer">LinkedIn ↗</a>
             <a href="https://github.com/gokhangokcen1" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a href="GÖKHAN GÖKCEN CV.pdf" target="_blank" data-tr="CV ↗" data-en="Résumé ↗">CV ↗</a>
+            <a id="resume-link" href="GÖKHAN-GÖKCEN-CV-TR.pdf" download data-tr="CV indir ↓" data-en="Download CV ↓">CV indir ↓</a>
             <a href="mailto:gokcenngokhan@gmail.com" data-tr="E-posta ↗" data-en="Email ↗">E-posta ↗</a>
           </nav>
         </div>
@@ -71,7 +71,9 @@
     <script>
       const nodes = document.querySelectorAll('[data-tr][data-en]');
       const languages = document.querySelectorAll('[data-lang]');
-      function setLanguage(lang) { document.documentElement.lang = lang; nodes.forEach(node => node.innerHTML = node.dataset[lang]); languages.forEach(node => node.classList.toggle('active', node.dataset.lang === lang)); localStorage.setItem('portfolio-language', lang); }
+      const resumeFiles = { tr: 'GÖKHAN-GÖKCEN-CV-TR.pdf', en: 'GÖKHAN-GÖKCEN-CV-EN.pdf' };
+      const resumeLink = document.getElementById('resume-link');
+      function setLanguage(lang) { document.documentElement.lang = lang; nodes.forEach(node => node.innerHTML = node.dataset[lang]); languages.forEach(node => node.classList.toggle('active', node.dataset.lang === lang)); resumeLink.href = resumeFiles[lang]; resumeLink.download = resumeFiles[lang]; localStorage.setItem('portfolio-language', lang); }
       const languageButton = document.querySelector('.language-switch');
       let currentLanguage = localStorage.getItem('portfolio-language') || (navigator.language.startsWith('tr') ? 'tr' : 'en');
       languageButton.addEventListener('click', () => { currentLanguage = currentLanguage === 'tr' ? 'en' : 'tr'; setLanguage(currentLanguage); });
