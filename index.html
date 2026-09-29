@@ -176,15 +176,16 @@
 
 
     <p
-      data-tr="Elektrik Elektronik Mühendisliği altyapımı gömülü sistemler, elektronik ve sistem programlama alanlarında geliştiriyorum. C ve mikrodenetleyici tabanlı sistemlere odaklanırken Linux, ağ haberleşmesi ve yapay zeka alanlarındaki deneyimlerimi de geliştiriyorum. Uzun vadede bu temeli robotik sistemler ve ROS2 ile birleştirmeyi hedefliyorum."
-      data-en="I am developing my Electrical and Electronics Engineering background in embedded systems, electronics and systems programming. While focusing on C and microcontroller-based systems, I continue to develop my experience in Linux, network communication and artificial intelligence. My long-term goal is to combine this foundation with robotics systems and ROS2."
+      data-tr="Elektrik Elektronik Mühendisliği altyapımı gömülü sistemler, elektronik ve sistem programlama alanlarında geliştiriyorum. C ve mikrodenetleyici tabanlı sistemlere odaklanırken Linux, ağ haberleşmesi ve yapay zeka alanlarındaki deneyimlerimi de geliştiriyorum. Bu temeli ROS 2 ile robotik sistemlere taşıyarak Gazebo'da tenis toplarını kendi bulup toplayan otonom bir robot geliştirdim."
+      data-en="I am developing my Electrical and Electronics Engineering background in embedded systems, electronics and systems programming. While focusing on C and microcontroller-based systems, I continue to develop my experience in Linux, network communication and artificial intelligence. I carried this foundation into robotics with ROS 2 and built an autonomous robot in Gazebo that finds and collects tennis balls on its own."
     >
       Elektrik Elektronik Mühendisliği altyapımı gömülü sistemler,
       elektronik ve sistem programlama alanlarında geliştiriyorum.
       C ve mikrodenetleyici tabanlı sistemlere odaklanırken Linux,
       ağ haberleşmesi ve yapay zeka alanlarındaki deneyimlerimi de
-      geliştiriyorum. Uzun vadede bu temeli robotik sistemler ve
-      ROS2 ile birleştirmeyi hedefliyorum.
+      geliştiriyorum. Bu temeli ROS 2 ile robotik sistemlere
+      taşıyarak Gazebo'da tenis toplarını kendi bulup toplayan
+      otonom bir robot geliştirdim.
     </p>
 
   </section>
@@ -256,11 +257,12 @@
         </h3>
 
         <p
-          data-tr="Gömülü sistemler, C++ ve haberleşme altyapısını robotik sistemlere taşımaya odaklanıyorum."
-          data-en="I am working toward applying embedded systems, C++ and communication foundations to robotics systems."
+          data-tr="Gömülü sistemler, C++ ve haberleşme altyapısını robotik sistemlere taşıyorum; ROS 2, Nav2 ve Gazebo ile otonom mobil robotlar geliştiriyorum."
+          data-en="I am applying embedded systems, C++ and communication foundations to robotics systems, building autonomous mobile robots with ROS 2, Nav2 and Gazebo."
         >
           Gömülü sistemler, C++ ve haberleşme altyapısını robotik
-          sistemlere taşımaya odaklanıyorum.
+          sistemlere taşıyorum; ROS 2, Nav2 ve Gazebo ile otonom
+          mobil robotlar geliştiriyorum.
         </p>
 
       </div>
@@ -524,7 +526,7 @@
 
     <br />
 
-    <!-- Robotik
+    <!-- Robotik -->
 
     <h3
       data-tr="Robotik"
@@ -535,11 +537,17 @@
 
     <div class="tags">
       <span>ROS2</span>
+      <span>Nav2</span>
       <span>Gazebo</span>
-      <span>Communication Sensors</span>
+      <span>TF2</span>
+      <span>URDF/Xacro</span>
+      <span>AMCL</span>
+      <span>EKF</span>
+      <span>ros2_control</span>
+      <span>RViz2</span>
     </div>
 
-    <br /> -->
+    <br />
 
         <!-- Networking -->
 
@@ -570,6 +578,7 @@
 
     <div class="tags">
       <span>PyTorch</span>
+      <span>OpenCV</span>
     </div>
 
   </section>
@@ -740,13 +749,53 @@
         <section id="projects">
 
         <h2
-          data-tr="Diğer projeler"
-          data-en="Other projects"
+          data-tr="Projeler"
+          data-en="Projects"
         >
-          Diğer projeler
+          Projeler
         </h2>
 
         <div class="projects">
+
+
+          <!-- Tennis Bot -->
+
+          <a
+            class="project"
+            href="https://github.com/gokhangokcen1/tennis-bot"
+            target="_blank"
+            rel="noreferrer"
+          >
+
+            <div>
+
+              <h3>
+                Tennis Bot
+                <span>↗</span>
+              </h3>
+
+              <p
+                data-tr="ROS 2 ve Gazebo Sim'de tenis toplarını RGB-D kamerayla bulup toplayan otonom mobil robot. Nav2 ile navigasyon, OpenCV ile top algılama ve NavigateToPose ile Spin action'larını kullanan bir görev planlayıcı içerir."
+                data-en="An autonomous mobile robot in ROS 2 and Gazebo Sim that finds tennis balls with an RGB-D camera and collects them. It includes Nav2 navigation, OpenCV ball detection and a task planner built on the NavigateToPose and Spin actions."
+              >
+                ROS 2 ve Gazebo Sim'de tenis toplarını RGB-D kamerayla
+                bulup toplayan otonom mobil robot. Nav2 ile navigasyon,
+                OpenCV ile top algılama ve NavigateToPose ile Spin
+                action'larını kullanan bir görev planlayıcı içerir.
+              </p>
+
+            </div>
+
+            <div class="tags small">
+
+              <span>ROS2</span>
+              <span>Nav2</span>
+              <span>Gazebo</span>
+              <span>OpenCV</span>
+
+            </div>
+
+          </a>
 
 
           <!-- IDS -->
@@ -820,6 +869,45 @@
               <span>Go</span>
               <span>ESP32</span>
               <span>Linux</span>
+              <span>TCP/IP</span>
+
+            </div>
+
+          </a>
+
+
+          <!-- ESP32 Network Suite -->
+
+          <a
+            class="project"
+            href="https://github.com/gokhangokcen1/esp32-embedded-network-suite"
+            target="_blank"
+            rel="noreferrer"
+          >
+
+            <div>
+
+              <h3>
+                ESP32 Embedded Network Suite
+                <span>↗</span>
+              </h3>
+
+              <p
+                data-tr="ESP-IDF ve FreeRTOS üzerinde çalışan TCP/UDP trafik üreticisi, throughput test aracı ve HTTP/JSON telemetri sunucusu."
+                data-en="A TCP/UDP traffic generator, throughput tester and HTTP/JSON telemetry server running on ESP-IDF and FreeRTOS."
+              >
+                ESP-IDF ve FreeRTOS üzerinde çalışan TCP/UDP trafik
+                üreticisi, throughput test aracı ve HTTP/JSON telemetri
+                sunucusu.
+              </p>
+
+            </div>
+
+            <div class="tags small">
+
+              <span>C</span>
+              <span>ESP32</span>
+              <span>FreeRTOS</span>
               <span>TCP/IP</span>
 
             </div>
@@ -1275,11 +1363,12 @@
         </h3>
 
         <p
-          data-tr="Gömülü sistemler · Firmware · Elektronik · Robotik · Sistemler · Ağ haberleşmesi"
-          data-en="Embedded systems · Firmware · Electronics · Robotics · Systems · Network communication"
+          data-tr="Gömülü sistemler · Firmware · Elektronik · Robotik · Otonom sistemler · Bilgisayarlı görü · Sistemler · Ağ haberleşmesi"
+          data-en="Embedded systems · Firmware · Electronics · Robotics · Autonomous systems · Computer vision · Systems · Network communication"
         >
           Gömülü sistemler · Firmware · Elektronik · Robotik ·
-          Sistemler · Ağ haberleşmesi
+          Otonom sistemler · Bilgisayarlı görü · Sistemler ·
+          Ağ haberleşmesi
         </p>
 
       </div>
