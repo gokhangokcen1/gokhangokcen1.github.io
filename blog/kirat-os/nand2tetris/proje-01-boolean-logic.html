@@ -25,21 +25,130 @@
 <div class="post-body">
 <p class="draft-note" id="draft-note" hidden></p>
 
-<h2>Özet</h2>
+  <!-- =========================================================
+                  ÖZET
+  ========================================================== --><h2>Özet</h2>
 <p>Bu bölümde ne yaptığımı ve neyi öğrendiğimi iki-üç cümleyle yaz.</p>
 
-<h2>Kavramlar</h2>
-<p>Temel fikirler, kendi cümlelerinle.</p>
+  <!-- =========================================================
+                  KAVRAMLAR
+  ========================================================== --><h2>Kavramlar</h2>
+<ul><li><b>Boolean Algebra:</b>1-0, Açık-Kapalı gibi ikilik tanımlamalar ve birbirleriyle mantıksal ilişkilerini işleyen cebirsel işlemler bütünü.</li></ul>
+<ul><li><b>Boolean Gates / Logic Gates:</b>Boolean fonksiyonlarını fiziksel bir araçla gerçekleştirme işine yarar.</li></ul>
+<ul><li><b>Truth Table: </b></li></ul>
+<ul><li><b>Canonicle Representation: </b></li></ul>
+<ul><li><b>Chip:</b>Tek tek transistörlerle kapıları yapmakla uğraşmıyoruz IC çipler ile tek bir araç ile o kapı(ları) gerçekleştirebiliyor.</li></ul>
+<ul><li><b>COMPOSITE GATES???</b></li></ul>
+<ul><li></li></ul>
+<ul><li></li></ul>
+<ul><li></li></ul>
 
-<h2>Yaptıklarım</h2>
-<p>Adım adım ne yaptığın.</p>
-<pre><code>// kod, komut veya devre notu</code></pre>
 
+
+
+  <!-- =========================================================
+                  YAPTIKLARIM
+  ========================================================== --><h2>Yaptıklarım</h2>
+<h3>Not kapısı</h3>
+<img src="proje-01-pics/not-gate.png" width="400px"/>
+<pre><code>
+// File name: projects/1/Not.hdl
+/**
+ * Not gate:
+ * if (in) out = 0, else out = 1
+ */
+CHIP Not {
+    IN in;
+    OUT out;
+
+    PARTS:
+    Nand(a=in, b=in, out=out);
+    }
+  </code></pre>
+
+<h3>And kapısı</h3>
+<img src="proje-01-pics/and-gate.png" width="400px"/>
+<pre><code>
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/1/And.hdl
+/**
+ * And gate:
+ * if (a and b) out = 1, else out = 0
+ */
+CHIP And {
+    IN a, b;
+    OUT out;
+
+    PARTS:
+    Nand(a=a, b=b, out=w1);
+    Not(in=w1, out=out);
+    }
+  </code></pre>
+
+  <h3>Or kapısı</h3>
+  <img src="proje-01-pics/or-gate.png" width="400px"/>
+<pre><code>
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/1/Or.hdl
+/**
+ * Or gate:
+ * if (a or b) out = 1, else out = 0
+ */
+CHIP Or {
+    IN a, b;
+    OUT out;
+
+    PARTS:
+    Not(in=a, out=nota);
+    Not(in=b, out=notb);
+    Nand(a=nota, b=notb, out=out);
+    }
+  </code></pre>
+
+
+  <h3>Xor kapısı</h3>
+  <img src="proje-01-pics/xor-gate.png" width="400px"/>
+<pre><code>
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/1/Xor.hdl
+/**
+ * Exclusive-or gate:
+ * if ((a and Not(b)) or (Not(a) and b)) out = 1, else out = 0
+ */
+CHIP Xor {
+    IN a, b;
+    OUT out;
+
+    PARTS:
+    Not(in=a, out=nota);
+    Not(in=b, out=notb);
+    And(a=a, b=notb, out=w1);
+    And(a=nota, b=b, out=w2);
+    Or(a=w1, b=w2, out=out);
+    }
+  </code></pre>
+  
+  <!-- =========================================================
+                  TAKILDIĞIM YERLER
+  ========================================================== -->
 <h2>Takıldığım yerler</h2>
-<p>Hatalar, çözümler, "bunu bilseydim" notları.</p>
+<p>Her bir kapının diğer kapılardan nasıl oluştuğunu anlamak için yalnızca truth table üzerinde anlamlandırmaya çalışıyordum. Kitabı biraz daha okuyunca anladım ki truth table'ı sesli okumak hangi kapılara ihtiyacımız olduğunu direkt olarak söylüyor zaten. Örneğin Xor kapısını ele alalım: a ve b'nin tersi ya da a'nın tersi ve = 1 yani ((a and Not(b)) or (Not(a) and b)) out = 1, else out=0 <b></b> </p>
 
+
+
+  <!-- =========================================================
+                  KAYNAKLAR
+  ========================================================== -->
 <h2>Kaynaklar</h2>
-<ul><li>Video / kitap / bağlantı</li></ul>
+<ul><li>The elements of Computing Systems</li></ul>
+<ul><li>Hardware Simulation</li></ul>
+<ul><li>Digital Simulation</li></ul>
 </div>
 <div class="pager" id="pager"></div>
 </article>
