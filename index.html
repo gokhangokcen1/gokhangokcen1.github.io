@@ -12,7 +12,7 @@
 
 <title>Gökhan Gökcen · Portfolio</title>
 
-<link rel="icon" type="image/png" href="shakespeare.png" />
+<link rel="icon" type="image/png" href="pics/shakespeare.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -139,12 +139,20 @@
 
         <a
           id="resume-link"
-          href="GÖKHAN-GÖKCEN-CV-TR.pdf"
+          href="cv/GÖKHAN-GÖKCEN-CV-TR.pdf"
           download
           data-tr="CV indir ↓"
           data-en="Download CV ↓"
         >
           CV indir ↓
+        </a>
+
+        <a
+          href="blog/index.html"
+          data-tr="Blog →"
+          data-en="Blog →"
+        >
+          Blog →
         </a>
 
       </nav>
@@ -154,7 +162,7 @@
 
     <img
       class="portrait"
-      src="pp.png"
+      src="pics/pp.png"
       alt="Gökhan Gökcen"
     />
 
@@ -1320,6 +1328,58 @@
        ADDITIONAL INFORMATION
   ========================================================== -->
 
+  <section id="blog">
+
+    <h2
+      data-tr="Notlar"
+      data-en="Notes"
+    >
+      Notlar
+    </h2>
+
+    <div class="projects">
+
+      <a class="project" href="blog/kirat-os/index.html">
+        <div>
+          <h3
+            data-tr="KIRAT-OS Notları <span>→</span>"
+            data-en="KIRAT-OS Notes <span>→</span>"
+          >
+            KIRAT-OS Notları <span>→</span>
+          </h3>
+          <p
+            data-tr="Nand2Tetris ve Ben Eater yolculuğunda öğrendiklerim; gün gün, bölüm bölüm."
+            data-en="What I learned along the Nand2Tetris and Ben Eater journey, day by day and chapter by chapter."
+          >
+            Nand2Tetris ve Ben Eater yolculuğunda öğrendiklerim; gün gün, bölüm bölüm.
+          </p>
+        </div>
+        <div class="tags small"><span>Nand2Tetris</span><span>Ben Eater</span></div>
+      </a>
+
+      <a class="project" href="blog/esp32/index.html">
+        <div>
+          <h3
+            data-tr="ESP32 Notları <span>→</span>"
+            data-en="ESP32 Notes <span>→</span>"
+          >
+            ESP32 Notları <span>→</span>
+          </h3>
+          <p
+            data-tr="ESP32 ve ESP-IDF öğrenirken tuttuğum notlar."
+            data-en="Notes I keep while learning ESP32 and ESP-IDF."
+          >
+            ESP32 ve ESP-IDF öğrenirken tuttuğum notlar.
+          </p>
+        </div>
+        <div class="tags small"><span>ESP32</span><span>ESP-IDF</span><span>FreeRTOS</span></div>
+      </a>
+
+    </div>
+
+  </section>
+
+
   <section id="additional">
 
     <h2
@@ -1490,6 +1550,14 @@
     </a>
 
     <a
+      href="#blog"
+      data-tr="Notlar"
+      data-en="Notes"
+    >
+      Notlar
+    </a>
+
+    <a
       href="#additional"
       data-tr="Ek bilgiler"
       data-en="Additional information"
@@ -1521,8 +1589,8 @@
 
 
   const resumeFiles = {
-    tr: "GÖKHAN-GÖKCEN-CV-TR.pdf",
-    en: "GÖKHAN-GÖKCEN-CV-EN.pdf"
+    tr: "cv/GÖKHAN-GÖKCEN-CV-TR.pdf",
+    en: "cv/GÖKHAN-GÖKCEN-CV-EN.pdf"
   };
 
 
