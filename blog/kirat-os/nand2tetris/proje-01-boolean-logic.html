@@ -50,7 +50,7 @@
                   YAPTIKLARIM
   ========================================================== --><h2>Yaptıklarım</h2>
 <h3>Not kapısı</h3>
-<img src="proje-01-pics/not-gate.png" width="400px"/>
+<img src="proje-01-pics/not-gate.png" width="350px"/>
 <pre><code>
 // File name: projects/1/Not.hdl
 /**
@@ -133,6 +133,56 @@ CHIP Xor {
     Or(a=w1, b=w2, out=out);
     }
   </code></pre>
+
+  <h3>MUX kapısı</h3>
+  <img src="proje-01-pics/mux-gate.png" width="500px"/>
+<pre><code>
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/1/Mux.hdl
+/**
+ * Multiplexor:
+ * if (sel = 0) out = a, else out = b
+ */
+CHIP Mux {
+    IN a, b, sel;
+    OUT out;
+
+    PARTS:
+        Not(in=sel, out=notsel);
+        And(a=a, b=notsel, out=w1);
+        And(a=sel, b=b, out=w2);
+        Or(a=w1, b=w2, out=out);
+    }
+  </code></pre>
+
+  <h3>DMux kapısı</h3>
+  <img src="proje-01-pics/dmux-gate.png" width="500px"/>
+<pre><code>
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/1/DMux.hdl
+/**
+ * Demultiplexor:
+ * [a, b] = [in, 0] if sel = 0
+ *          [0, in] if sel = 1
+ */
+CHIP DMux {
+    IN in, sel;
+    OUT a, b;
+
+    PARTS:
+    Not(in=sel, out=notsel);
+    And(a=in, b=notsel, out=a);
+    And(a=in, b=sel, out=b);
+    }
+  </code></pre>
+  
+
+
+
   
   <!-- =========================================================
                   TAKILDIĞIM YERLER
