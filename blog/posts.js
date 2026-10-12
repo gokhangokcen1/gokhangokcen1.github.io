@@ -51,16 +51,15 @@ window.BLOG = {
           id: "temeller",
           title: { tr: "Temeller", en: "Fundamentals" },
           chapters: [
-            { slug: "01-mimari-ve-arac-zinciri", t: "Mimari ve araç zinciri", e: "Architecture and toolchain", draft: true },
-            { slug: "02-gpio", t: "GPIO", e: "GPIO", draft: true },
-            { slug: "03-freertos-gorevleri", t: "FreeRTOS görevleri", e: "FreeRTOS tasks", draft: true }
+            { slug: "01-hello-world", t: "Hello World", e: "Hello World", draft: false },
           ]
         },
         {
-          id: "cevre-birimleri",
-          title: { tr: "Çevre birimleri", en: "Peripherals" },
+          id: "FreeRTOS",
+          title: { tr: "FreeRTOS", en: "FreeRTOS" },
           chapters: [
-            { slug: "04-adc", t: "ADC", e: "ADC", draft: true }
+            { slug: "04-freetos-giris", t: "FreeRTOS Giriş", e: "Intro to FreeRTOS", draft: false },
+            // { slug: "04-adc", t: "ADC", e: "ADC", draft: false },
           ]
         }
       ]
